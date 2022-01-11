@@ -1,3 +1,28 @@
-h1, p {
+h1,
+p {
   font-family: Lato;
+}
+.containerStyles {
+  width: 100%;
+  height: 100vh;
+}
+
+.node__root > circle {
+  fill: red;
+  border: 1px solid blue;
+  width: 20;
+  height: 20;
+  r: 20;
+
+}
+
+.node__branch > circle {
+  fill: yellow;
+}
+.node__branch:hover{
+  fill: blue;
+}
+
+.node__leaf > circle {
+  fill: green;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
-import Tree from 'react-d3-tree';
+import Tree from 'react-hierarchy-tree-graph';
+import './styles.css';
 
+/* data for the tress diagram */
 const debugData = [
   {
     name: 'Parent',
@@ -10,16 +12,24 @@ const debugData = [
       },
       {
         name: 'child 2',
+        children: [{ name: 'leaf' }],
       },
     ],
   },
 ];
 
-const containerStyles = {
-  width: '100%',
-  height: '100vh',
+/* this is the styling for the tree nodes*/
+const svgSquare = {
+  shape: 'rect',
+  shapeProps: {
+    width: '140',
+    height: '20',
+    y: '-20',
+    x: '-10',
+  },
 };
 
+/* the created class for the tree diagram */
 export default class CenteredTree extends React.PureComponent {
   state = {};
 
@@ -35,16 +45,11 @@ export default class CenteredTree extends React.PureComponent {
 
   render() {
     return (
-      <div style={containerStyles} ref={(tc) => (this.treeContainer = tc)}>
+      <div className="containerStyles" ref={(tc) => (this.treeContainer = tc)}>
         <Tree
+          className="TreeLayout"
           data={debugData}
-          translate={this.state.translate}
-          orientation= {'horizontal'}
-          pathFunc= {'step'}
-          depthFactor={'80'}
-          zoom={'1'}
-          transitionDuration = '1000'
-          // scaleExtent={'max?:1000; min?:20'}
+          nodeSvgShape={svgSquare}
         />
       </div>
     );
