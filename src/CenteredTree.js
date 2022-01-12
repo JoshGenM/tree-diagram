@@ -29,7 +29,7 @@ const svgNode = {
     height: '20',
     y: '-10',
     x: '-10',
-    fill: '#242526',
+    fill: '',
   },
 };
 
