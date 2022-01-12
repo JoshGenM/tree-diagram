@@ -7,7 +7,11 @@ p {
   height: 100vh;
 }
 
-.node__root > circle {
+.TreeLayout{
+  background-color: red;
+}
+
+.node__root {
   fill: red;
   border: 1px solid blue;
   width: 20;
@@ -16,13 +20,14 @@ p {
 
 }
 
-.node__branch > circle {
+.node__branch:hover {
   fill: yellow;
 }
 .node__branch:hover{
   fill: blue;
 }
 
-.node__leaf > circle {
+.node__leaf {
   fill: green;
 }
+
