@@ -22,7 +22,7 @@ var data = rawdata
 
 
 var newData = { name :"Billing", children : [] },
-  levels = ["L1","L2"];
+  levels = ["L1","L2",'L3'];
 
 // For each data row, loop through the expected levels traversing the output tree
 data.forEach(function(d){
